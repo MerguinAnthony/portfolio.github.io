@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ page_title }}{% endblock %}
+
+{% block body %}
+<header>
+    <section id="hero">
+        <!-- Section d'introduction et message d'accueil -->
+        <div class="hero-content text-center">
+            <img class="hero-img img-fluid" src="assets/img/amlsf.png" alt="logo">
+            <h2>PRÉSENTATION</h2>
+            <img class="img-h2 mt-4" src="assets/img/profile.png" alt="Photo de profil">
+            <p class="mt-4">{{ hero }}</p>
+        </div>
+    </section>
+</header>
+    <main>
+        <section id="services">
+            <!-- Section des services offerts -->
+            <div class="services-content mt-5">
+                <h2>SAVOIR FAIRE</h2>
+                <img class="img-h2 mt-4" src="assets/img/savoir-faire.png" alt="Photo de profil">
+                <p class="mt-4">En tant que développeur web full stack, je maîtrise toutes les technologies pour vous aider à réaliser
+                    vos projets en ligne :</p>
+
+                {% for service in services %}
+                <div class="service-item mt-3">
+                    <h3 class="mt-4">{{ service.title }}</h3>
+                    <p>{{ service.description }}</p>
+                </div>
+                {% endfor %}
+
+            </div>
+        </section>
+
+        <!-- Vous pouvez ajouter d'autres sections comme "Mes Projets", "Mon Parcours", "Contact", etc. -->
+
+    </main>
+
+    <footer>
+<div class=" container-fluid d-flex flex-row visually-hidden">
+                        <a target="_blank" rel="noopener" class="nav-link" href="https://github.com/thomaspark/bootswatch/"><img src="assets/img/github.png" alt="lien vers github"></a>
+                        <a target="_blank" rel="noopener" class="nav-link" href="https://twitter.com/bootswatch"><img src="assets/img/facebook.png" alt="lien vers facebook"></a>
+                        <a target="_blank" rel="noopener" class="nav-link" href="https://twitter.com/bootswatch"><img src="assets/img/linkedin.png" alt="lien vers linkedin"></a>
+</div>
+        <!-- Coordonnées de contact, liens sociaux, etc. -->
+    </footer>
+{% endblock %}

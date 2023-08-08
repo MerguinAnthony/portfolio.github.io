@@ -1,0 +1,11 @@
+.module-line {
+  background: #666;
+  width: 55px;
+  height: 1px;
+  margin: 42px auto;
+}
+
+.img-h2 {
+  border-radius: 50%;
+  width: 40%;
+}
